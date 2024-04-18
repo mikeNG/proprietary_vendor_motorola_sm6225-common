@@ -142,6 +142,9 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sm6225-common/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
     vendor/motorola/sm6225-common/proprietary/vendor/bin/vendor.qti.hardware.soter@1.0-provision:$(TARGET_COPY_OUT_VENDOR)/bin/vendor.qti.hardware.soter@1.0-provision \
     vendor/motorola/sm6225-common/proprietary/vendor/bin/vendor.qti.qspmhal@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/vendor.qti.qspmhal@1.0-service \
+    vendor/motorola/sm6225-common/proprietary/vendor/bin/wfdhdcphalservice:$(TARGET_COPY_OUT_VENDOR)/bin/wfdhdcphalservice \
+    vendor/motorola/sm6225-common/proprietary/vendor/bin/wfdvndservice:$(TARGET_COPY_OUT_VENDOR)/bin/wfdvndservice \
+    vendor/motorola/sm6225-common/proprietary/vendor/bin/wifidisplayhalservice:$(TARGET_COPY_OUT_VENDOR)/bin/wifidisplayhalservice \
     vendor/motorola/sm6225-common/proprietary/vendor/bin/xtra-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/xtra-daemon \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/charger_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fstab.qti \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
@@ -235,6 +238,9 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/seccomp_policy/qspm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qspm.policy \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/seccomp_policy/qti-systemd.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qti-systemd.policy \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
+    vendor/motorola/sm6225-common/proprietary/vendor/etc/seccomp_policy/wfdhdcphalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdhdcphalservice.policy \
+    vendor/motorola/sm6225-common/proprietary/vendor/etc/seccomp_policy/wfdvndservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdvndservice.policy \
+    vendor/motorola/sm6225-common/proprietary/vendor/etc/seccomp_policy/wifidisplayhalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wifidisplayhalservice.policy \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/sensors/proto/descriptor.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/descriptor.proto \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/sensors/proto/mot_barocal.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/mot_barocal.proto \
@@ -330,6 +336,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/ssg/tz_whitelist.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/tz_whitelist.json \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/system_properties.xml:$(TARGET_COPY_OUT_VENDOR)/etc/system_properties.xml \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/vhw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vhw.xml \
+    vendor/motorola/sm6225-common/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/wifi/aoa_cldb_falcon.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_falcon.bin \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/wifi/aoa_cldb_swl14.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_swl14.bin \
     vendor/motorola/sm6225-common/proprietary/vendor/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf \
@@ -430,6 +437,26 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sm6225-common/proprietary/vendor/lib/libsurround_3mic_proc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsurround_3mic_proc.so \
     vendor/motorola/sm6225-common/proprietary/vendor/lib/libswvdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libswvdec.so \
     vendor/motorola/sm6225-common/proprietary/vendor/lib/libsysmon_cdsp_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsysmon_cdsp_skel.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdcodecv4l2_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdcodecv4l2_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdcommonutils_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdcommonutils_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdconfigutils_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdconfigutils_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfddisplayconfig_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfddisplayconfig_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdhdcpcp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdhdcpcp.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdhdcpservice_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdhdcpservice_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdmminterface_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmminterface_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdmmservice_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmmservice_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdmmsrc_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmmsrc_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdmodulehdcpsession.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmodulehdcpsession.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdrtsp_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdrtsp_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdsessionmodule.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdsessionmodule.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdsourcesession_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdsourcesession_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdsourcesm_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdsourcesm_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfduibcinterface_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfduibcinterface_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfduibcsink_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfduibcsink_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfduibcsinkinterface_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfduibcsinkinterface_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfduibcsrc_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfduibcsrc_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfduibcsrcinterface_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfduibcsrcinterface_proprietary.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/libwfdutils_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdutils_proprietary.so \
     vendor/motorola/sm6225-common/proprietary/vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/capi_v2_aptX_Classic.so \
     vendor/motorola/sm6225-common/proprietary/vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/capi_v2_aptX_HD.so \
     vendor/motorola/sm6225-common/proprietary/vendor/lib/rfsa/adsp/libadsp_jpege_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libadsp_jpege_skel.so \
@@ -449,6 +476,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sm6225-common/proprietary/vendor/lib/vendor.qti.hardware.dsp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.dsp@1.0.so \
     vendor/motorola/sm6225-common/proprietary/vendor/lib/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.vpp@1.1.so \
     vendor/motorola/sm6225-common/proprietary/vendor/lib/vendor.qti.hardware.vpp@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.vpp@1.2.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.wifidisplaysession@1.0.so \
+    vendor/motorola/sm6225-common/proprietary/vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so \
     vendor/motorola/sm6225-common/proprietary/vendor/lib/vendor.qti.qspmhal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.qspmhal@1.0.so \
     vendor/motorola/sm6225-common/proprietary/vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
     vendor/motorola/sm6225-common/proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.imscmservice@1.0.so \
